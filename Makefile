@@ -1,6 +1,6 @@
 EXAMPLE_BUILD_TOOL = go run github.com/hajimehoshi/wasmserve@latest
 
-.PHONY: run_example
+.PHONY: run_example test
 
 run_example:
 	@echo
@@ -10,3 +10,12 @@ run_example:
 	@echo
 	
 	$(EXAMPLE_BUILD_TOOL) ./example/
+
+test:
+	@echo
+	@echo " ----------------------------------------------------"
+	@echo "|              Building $(NAME)...                |"
+	@echo " ----------------------------------------------------"
+	@echo
+
+	GOOS=js GOARCH=wasm go build -o test/main.wasm example/main.go
