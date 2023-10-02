@@ -22,3 +22,4 @@ go.work
 
 # Webassembly compiled stuff
 **.wasm
+**.DS_Store
