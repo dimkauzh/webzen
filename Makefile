@@ -1,6 +1,16 @@
-EXAMPLE_BUILD_TOOL = go run github.com/hajimehoshi/wasmserve@latest
+EXAMPLE_BUILD_TOOL = wasmserve
 
-.PHONY: example test
+.PHONY: setup example build_test test_backend test1
+
+setup:
+	@echo
+	@echo " ----------------------------------------------------"
+	@echo "|              Setting up...                       |"
+	@echo " ----------------------------------------------------"
+	@echo
+
+	go install github.com/hajimehoshi/wasmserve@latest
+
 
 example:
 	@echo
