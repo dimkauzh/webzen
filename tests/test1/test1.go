@@ -3,5 +3,6 @@ package main
 import "webzen/src/webzen/draw"
 
 func main() {
-	draw.DrawText("Hello world!")
+	draw.DrawTitleText("Hello, World!")
+	draw.DrawText("Hello under the world!")
 }
