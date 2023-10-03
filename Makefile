@@ -28,7 +28,8 @@ build_test:
 	@echo " ----------------------------------------------------"
 	@echo
 
-	GOOS=js GOARCH=wasm go build -o build/main.wasm tests/backend.go
+	GOOS=js GOARCH=wasm go build -o build/main.wasm tests/backend/backend.go
+	GOOS=js GOARCH=wasm go build -o build/main.wasm tests/test1/test1.go
 
 test_backend:
 	@echo
