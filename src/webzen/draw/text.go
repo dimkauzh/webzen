@@ -2,7 +2,8 @@ package draw
 
 import (
 	"strconv"
-	"webzen/src/backend/document"
+
+	"github.com/dimkauzh/webzen/src/backend/document"
 )
 
 func DrawText(text string, size, x, y int) {

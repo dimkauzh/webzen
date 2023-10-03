@@ -2,8 +2,9 @@ package webzen
 
 import (
 	"syscall/js"
-	"webzen/src/backend/document"
-	"webzen/src/backend/window"
+
+	"github.com/dimkauzh/webzen/src/backend/document"
+	"github.com/dimkauzh/webzen/src/backend/window"
 )
 
 func Init() {

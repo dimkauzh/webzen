@@ -1,8 +1,8 @@
 package main
 
 import (
-	"webzen/src/webzen"
-	"webzen/src/webzen/draw"
+	"github.com/dimkauzh/webzen/src/webzen"
+	"github.com/dimkauzh/webzen/src/webzen/draw"
 )
 
 func main() {

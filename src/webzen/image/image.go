@@ -2,8 +2,9 @@ package image
 
 import (
 	"syscall/js"
-	"webzen/src/backend/document"
-	"webzen/src/backend/global"
+
+	"github.com/dimkauzh/webzen/src/backend/document"
+	"github.com/dimkauzh/webzen/src/backend/global"
 )
 
 func DrawImage(imagePath string, width, height, x, y float64) {

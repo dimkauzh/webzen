@@ -2,7 +2,8 @@ package draw
 
 import (
 	"strconv"
-	"webzen/src/backend/document"
+
+	"github.com/dimkauzh/webzen/src/backend/document"
 )
 
 func DrawRect(width, height, x, y float64, color [4]int) {

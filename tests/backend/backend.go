@@ -1,8 +1,8 @@
 package main
 
 import (
-	"webzen/src/backend/console"
-	"webzen/src/backend/document"
+	"github.com/dimkauzh/webzen/src/backend/console"
+	"github.com/dimkauzh/webzen/src/backend/document"
 )
 
 func main() {

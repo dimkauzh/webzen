@@ -2,10 +2,10 @@ package main
 
 import (
 	// Import the webzen package
-	"webzen/src/webzen"
+	"github.com/dimkauzh/webzen/src/webzen"
 
 	// Import the webzen draw package
-	"webzen/src/webzen/draw"
+	"github.com/dimkauzh/webzen/src/webzen/draw"
 )
 
 func main() {
