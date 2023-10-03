@@ -1,4 +1,4 @@
-# Webzen - A Go UI Framework for WebAssembly
+# Webzen - A Go UI/Render Framework for WebAssembly
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/dimkauzh/webzen)
 ![GitHub license](https://img.shields.io/github/license/dimkauzh/webzen)
