@@ -4,7 +4,7 @@
 ![GitHub license](https://img.shields.io/github/license/dimkauzh/webzen)
 ![Lines of code](https://tokei.rs/b1/github/dimkauzh/webzen?category=lines)
 
-Webzen is a Go UI Framework that targets WebAssembly, enabling you to build web applications with Go. It helps you build ui's in the web easy and fast. This project leverages `syscall/js` to interact with the JavaScript runtime in the browser.
+Webzen is a Go UI/Render Framework that targets WebAssembly, enabling you to build web applications with Go. It helps you build ui's in the web and render things easy and fast. This project leverages `syscall/js` to interact with the JavaScript runtime in the browser.
 
 > **Please note that Webzen is currently under high maintenance and is not production-ready.** The project is actively being developed and improved, which is why there is only a `dev` branch available.
 
