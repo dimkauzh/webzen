@@ -2,13 +2,13 @@ package draw
 
 import (
 	"strconv"
-	"syscall/js"
+	"webzen/src/backend/document"
 )
 
-func DrawRect(width, height int, x, y float64, color [4]int) {
-	canvas := js.Global().Get("document").Call("getElementById", "canvas")
+func DrawRect(width, height, x, y float64, color [4]int) {
+	canvas := document.GetElementById("canvas")
 	// Get the canvas context
-	context := canvas.Call("getContext", "2d")
+	context := canvas.GetContext("2d")
 
 	// Draw the rectangle
 	rgba := "rgba(" +
@@ -17,13 +17,13 @@ func DrawRect(width, height int, x, y float64, color [4]int) {
 		strconv.Itoa(color[2]) + "," +
 		strconv.FormatFloat(float64(color[3])/255.0, 'f', -1, 64) + ")"
 	context.Set("fillStyle", rgba)
-	context.Call("fillRect", x, y, width, height) // Set the rectangle dimensions as needed
+	context.FillRect(x, y, width, height) // Set the rectangle dimensions as needed
 }
 
 func FillBackground(color [4]int) {
-	canvas := js.Global().Get("document").Call("getElementById", "canvas")
+	canvas := document.GetElementById("canvas")
 	// Get the canvas context
-	context := canvas.Call("getContext", "2d")
+	context := canvas.GetContext("2d")
 
 	// Fill the canvas with the specified color
 	rgba := "rgba(" +
@@ -32,5 +32,5 @@ func FillBackground(color [4]int) {
 		strconv.Itoa(color[2]) + "," +
 		strconv.FormatFloat(float64(color[3])/255.0, 'f', -1, 64) + ")"
 	context.Set("fillStyle", rgba)
-	context.Call("fillRect", 0, 0, canvas.Get("width").Float(), canvas.Get("height").Float())
+	context.FillRect(0, 0, canvas.Get("width").Float(), canvas.Get("height").Float())
 }

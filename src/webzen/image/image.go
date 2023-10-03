@@ -1,22 +1,26 @@
 package image
 
-import "syscall/js"
+import (
+	"syscall/js"
+	"webzen/src/backend/document"
+	"webzen/src/backend/global"
+)
 
 func DrawImage(imagePath string, width, height, x, y float64) {
-	canvas := js.Global().Get("document").Call("getElementById", "canvas")
-	context := canvas.Call("getContext", "2d")
+	canvas := document.GetElementById("canvas")
+	context := canvas.GetContext("2d")
 
 	// Load and draw the image
-	img := js.Global().Get("document").Call("createElement", "img")
+	img := document.CreateElement("img")
 	img.Set("src", imagePath)
-	img.Call("addEventListener", "load", js.FuncOf(func(this js.Value, p []js.Value) interface{} {
-		context.Call("drawImage", img, x, y, width, height)
+	img.AddEventListener("load", js.FuncOf(func(this js.Value, p []js.Value) interface{} {
+		context.DrawImage(img, x, y, width, height)
 		return nil
 	}))
 
 	// Handle image loading errors
-	img.Call("addEventListener", "error", js.FuncOf(func(this js.Value, p []js.Value) interface{} {
-		js.Global().Call("alert", "Failed to load image")
+	img.AddEventListener("error", js.FuncOf(func(this js.Value, p []js.Value) interface{} {
+		global.Alert("Failed to load image: " + imagePath)
 		return nil
 	}))
 }
