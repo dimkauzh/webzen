@@ -1,17 +1,21 @@
 package draw
 
-import "webzen/src/backend/document"
+import (
+	"strconv"
+	"syscall/js"
+)
 
-func DrawTitleText(text string) {
-	p := document.CreateElement("p")
+func DrawText(text string, size, x, y int) {
+	canvas := js.Global().Get("document").Call("getElementById", "canvas")
+	// Get the canvas context
+	context := canvas.Call("getContext", "2d")
 
-	p.Set("innerText", "Hello, World!")
-	document.Body.AppendChild(p)
-}
+	// Set the text size and font
+	context.Set("font", strconv.Itoa(size)+"px Arial")
 
-func DrawText(text string) {
-	p := document.CreateElement("pre")
-	p.Set("innerText", text)
-	p.Style.Set("whiteSpace", "pre-wrap")
-	document.Body.AppendChild(p)
+	// Set the text color
+	context.Set("fillStyle", "black") // You can change the text color as needed
+
+	// Draw the text at the specified position
+	context.Call("fillText", text, float64(x), float64(y))
 }
