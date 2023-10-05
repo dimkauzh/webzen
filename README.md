@@ -8,6 +8,16 @@ Webzen is a Go Game Engine that targets WebAssembly, enabling you to build web a
 > **Please note that Webzen is currently under high maintenance and is not production-ready.** The project is actively being developed and improved, which is why there is only a `dev` branch available.
 
 ## Building
+
+### Prerequisites
+Webzen doesnt need anything except Go version that is higher that 1.18. There is no C compiler or anything needed, but we recommend wasmserve to quickly run your code.
+
+### Getting the Go package
+Wenzen is an ordinary go package, so you can get it using this command:
+```bash
+go get https://github.com/dimkauzh/webzen@latest
+```
+
 ### How to Run the Example
 
 To run the example provided in this repository, follow these steps:
