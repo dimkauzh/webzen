@@ -1,7 +1,7 @@
 EXAMPLE_BUILD_TOOL = wasmserve
 VERSION = v0.0.3
 
-.PHONY: setup example build_test test_backend test1
+.PHONY: setup example build_test test_backend test1 release
 
 setup:
 	@echo
@@ -50,7 +50,7 @@ test1:
 
 	$(EXAMPLE_BUILD_TOOL) ./tests/test1/test1.go
 
-publish:
+release:
 	@echo
 	@echo " ----------------------------------------------------"
 	@echo "|              Publishing $(NAME)...              |"
