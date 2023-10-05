@@ -9,7 +9,7 @@ import (
 	"github.com/dimkauzh/webzen/src/backend/document"
 )
 
-func SetPixel(x, y int, color [4]int) {
+func SetPixel(x, y float64, color [4]int) {
 	canvas := document.GetElementById("canvas")
 	// Get the canvas context
 	context := canvas.GetContext("2d")
