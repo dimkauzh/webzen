@@ -47,5 +47,9 @@ You can then include the generated .wasm file in your web application and load i
 
 Feel free to explore the example provided in this repository to better understand how Webzen works and how you can create your own Go-powered web applications.
 
+## Documentation
+The documentation for Webzen is available at https://github.com/dimkauzh/webzen/wiki.
+
+
 ## License
 This project is licensed under the GPLv3 License - see the LICENSE file for details.
