@@ -21,7 +21,19 @@ go get github.com/dimkauzh/webzen@latest
 ### How to Run the Example
 
 To run the example provided in this repository, follow these steps:
-1. Install needed dependencies:
+
+1. Clone this repository to your local machine:
+
+```shell
+git clone https://github.com/dimkauzh/webzen.git
+```
+2. Navigate to the project folder:
+
+```shell
+cd webzen
+```
+
+3. Install needed dependencies:
 
 First, make sure you have Go installed, secondly, run make install to install everything needed:
 
@@ -29,16 +41,6 @@ First, make sure you have Go installed, secondly, run make install to install ev
 make setup
 ```
 
-2. Clone this repository to your local machine:
-
-```shell
-git clone https://github.com/dimkauzh/webzen.git
-```
-3. Navigate to the project folder:
-
-```shell
-cd webzen
-```
 4. Build and run the example using make and wasmserve. This will start a local development server at localhost:8080:
 ```shell
 make example
