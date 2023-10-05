@@ -1,4 +1,5 @@
 EXAMPLE_BUILD_TOOL = wasmserve
+VERSION = v0.0.3
 
 .PHONY: setup example build_test test_backend test1
 
@@ -48,3 +49,12 @@ test1:
 	@echo
 
 	$(EXAMPLE_BUILD_TOOL) ./tests/test1/test1.go
+
+publish:
+	@echo
+	@echo " ----------------------------------------------------"
+	@echo "|              Publishing $(NAME)...              |"
+	@echo " ----------------------------------------------------"
+	@echo
+
+	GOPROXY=proxy.golang.org go list -m github.com/dimkauzh/webzen@$(VERSION)

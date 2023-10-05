@@ -15,7 +15,7 @@ Webzen doesnt need anything except Go version that is higher that 1.18. There is
 ### Getting the Go package
 Wenzen is an ordinary go package, so you can get it using this command:
 ```bash
-go get https://github.com/dimkauzh/webzen@latest
+go get github.com/dimkauzh/webzen@latest
 ```
 
 ### How to Run the Example
