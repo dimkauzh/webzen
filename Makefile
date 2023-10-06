@@ -1,5 +1,5 @@
 EXAMPLE_BUILD_TOOL = wasmserve
-VERSION = v0.0.4
+VERSION = null
 
 .PHONY: setup example build_test test_backend test1 release
 
