@@ -25,7 +25,7 @@ To run the example provided in this repository, follow these steps:
 1. Clone this repository to your local machine:
 
 ```shell
-git clone https://github.com/dimkauzh/webzen.git
+git clone github.com/dimkauzh/webzen.git
 ```
 2. Navigate to the project folder:
 
