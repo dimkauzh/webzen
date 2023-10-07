@@ -10,6 +10,22 @@ import (
 	"github.com/dimkauzh/webzen/src/backend/global"
 )
 
+type Image struct {
+  imagePath string
+  width float64
+  height float64
+  x float64
+  y float64
+}
+
+func LoadImage(imagePath string, width, height, x, y float64) Image {
+  return Image{imagePath, width, height, x, y}
+}
+
+func (i *Image) Draw() {
+  DrawImage(i.imagePath, i.width, i.height, i.x, i.y)
+}
+
 func DrawImage(imagePath string, width, height, x, y float64) {
 	canvas := document.GetElementById("canvas")
 	context := canvas.GetContext("2d")
