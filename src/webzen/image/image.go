@@ -11,26 +11,25 @@ import (
 )
 
 type Image struct {
-  imagePath string
-  width float64
-  height float64
-  x float64
-  y float64
+	imagePath string
+	width     float64
+	height    float64
+	x         float64
+	y         float64
 }
 
 func LoadImage(imagePath string, width, height, x, y float64) Image {
-  return Image{imagePath, width, height, x, y}
+	return Image{imagePath, width, height, x, y}
 }
 
 func (i *Image) Draw() {
-  DrawImage(i.imagePath, i.width, i.height, i.x, i.y)
+	DrawImage(i.imagePath, i.width, i.height, i.x, i.y)
 }
 
 func DrawImage(imagePath string, width, height, x, y float64) {
 	canvas := document.GetElementById("canvas")
 	context := canvas.GetContext("2d")
 
-	// Load and draw the image
 	img := document.CreateElement("img")
 	img.Set("src", imagePath)
 	img.AddEventListener("load", js.FuncOf(func(this js.Value, p []js.Value) interface{} {
@@ -38,7 +37,6 @@ func DrawImage(imagePath string, width, height, x, y float64) {
 		return nil
 	}))
 
-	// Handle image loading errors
 	img.AddEventListener("error", js.FuncOf(func(this js.Value, p []js.Value) interface{} {
 		global.Alert("Failed to load image: " + imagePath)
 		return nil

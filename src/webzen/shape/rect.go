@@ -8,27 +8,23 @@ import (
 	"github.com/dimkauzh/webzen/src/backend/document"
 )
 
-
 type Rect struct {
-  x float64
-  y float64
-  width float64
-  height float64
-  color [4]int
-
+	x      float64
+	y      float64
+	width  float64
+	height float64
+	color  [4]int
 }
 
 func NewRect(x, y, width, height float64, color [4]int) Rect {
-  return Rect{x, y, width, height, color}
+	return Rect{x, y, width, height, color}
 }
 
 func (r *Rect) Draw() {
-  canvas := document.GetElementById("canvas")
-	// Get the canvas context
+	canvas := document.GetElementById("canvas")
 	context := canvas.GetContext("2d")
 
-	// Draw the rectangle
 	rgba := colors.GetRGBA(r.color)
 	context.Set("fillStyle", rgba)
-	context.FillRect(r.x, r.y, r.width, r.height) 
+	context.FillRect(r.x, r.y, r.width, r.height)
 }
