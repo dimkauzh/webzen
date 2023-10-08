@@ -41,6 +41,10 @@ func (c *context) FillRect(x, y, width, height float64) {
 	c.context.Call("fillRect", x, y, width, height)
 }
 
+func (c *context) ClearRect(x, y, width, height float64) {
+	c.context.Call("clearRect", x, y, width, height)
+}
+
 func (c *context) DrawImage(img js.Value, x, y, width, height float64) {
 	c.context.Call("drawImage", img, x, y, width, height)
 }

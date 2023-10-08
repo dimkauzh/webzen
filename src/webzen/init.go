@@ -5,17 +5,23 @@ package webzen
 
 import (
 	"syscall/js"
-  "time"
+	"time"
 
 	"github.com/dimkauzh/webzen/src/backend/document"
 	"github.com/dimkauzh/webzen/src/backend/window"
-  "github.com/dimkauzh/webzen/src/webzen/keys"
+	"github.com/dimkauzh/webzen/src/webzen/keys"
 )
 
 var fpsInterval = time.Millisecond * 16
 
 func SetFps(fps int) {
-    fpsInterval = time.Second / time.Duration(fps)
+	fpsInterval = time.Second / time.Duration(fps)
+}
+
+func clearCanvas() {
+	canvas := document.GetElementById("canvas")
+	context := canvas.GetContext("2d")
+	context.ClearRect(0, 0, canvas.Get("width").Float(), canvas.Get("height").Float())
 }
 
 func Init() {
@@ -38,9 +44,10 @@ func Init() {
 		return nil
 	}))
 
-  keys.SetupEventListeners()
+	keys.SetupEventListeners()
 }
 
 func Update() {
-   time.Sleep(time.Millisecond * 16)
+	time.Sleep(time.Millisecond * 16)
+	clearCanvas()
 }
