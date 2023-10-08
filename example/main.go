@@ -18,7 +18,7 @@ func main() {
 	  draw.FillBackground([4]int{255, 255, 188, 255})
 
 	  // Draw text on the screen
-	  draw.DrawText("Hello under the world!", 21, 100, 100)
+	  draw.DrawText("Hello, world!", 21, 100, 100)
 
 	  // Draw a rectangle on the screen
   	draw.DrawRect(50, 500, 400, 400, [4]int{146, 255, 123, 255})
