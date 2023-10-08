@@ -5,9 +5,11 @@ package webzen
 
 import (
 	"syscall/js"
+  "time"
 
 	"github.com/dimkauzh/webzen/src/backend/document"
 	"github.com/dimkauzh/webzen/src/backend/window"
+  "github.com/dimkauzh/webzen/src/webzen/keys"
 )
 
 func Init() {
@@ -29,4 +31,11 @@ func Init() {
 		canvas.Set("height", document.DocumentElement.ClientHeight())
 		return nil
 	}))
+
+  keys.SetupEventListeners()
+}
+
+func Update() {
+  time.Sleep(time.Millisecond * 16)
+ 
 }

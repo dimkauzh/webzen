@@ -34,6 +34,10 @@ func CreateCanvasElement() canvas {
 	return canvas{cd}
 }
 
+func AddEventListener(event string, f js.Func) {
+	js.Global().Get("document").Call("addEventListener", event, f)
+}
+
 func (e *element) Set(key string, value interface{}) {
 	e.el.Set(key, value)
 }
