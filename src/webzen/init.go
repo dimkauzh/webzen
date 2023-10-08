@@ -12,6 +12,12 @@ import (
   "github.com/dimkauzh/webzen/src/webzen/keys"
 )
 
+var fpsInterval = time.Millisecond * 16
+
+func SetFps(fps int) {
+    fpsInterval = time.Second / time.Duration(fps)
+}
+
 func Init() {
 	canvas := document.GetElementById("canvas")
 	if canvas.IsNull() {
@@ -36,6 +42,5 @@ func Init() {
 }
 
 func Update() {
-  time.Sleep(time.Millisecond * 16)
- 
+   time.Sleep(time.Millisecond * 16)
 }
