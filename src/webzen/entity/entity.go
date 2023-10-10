@@ -5,7 +5,7 @@ package entity
 
 import (
   "github.com/dimkauzh/webzen/src/webzen/image"
-  rect "github.com/dimkauzh/webzen/src/webzen/shape"
+  "github.com/dimkauzh/webzen/src/webzen/shape"
 )
 
 type Entity struct {
@@ -14,7 +14,7 @@ type Entity struct {
   width  int
   height int
   image  image.Image
-  rect   rect.Rect
+  rect   shape.Rect
 }
 
 func NewEntity(x int, y int, width int, height int) Entity {
@@ -25,6 +25,6 @@ func (e *Entity) SetImage(image image.Image) {
   e.image = image
 }
 
-func (e *Entity) SetRect(rect rect.Rect) {
+func (e *Entity) SetRect(rect shape.Rect) {
   e.rect = rect
 }
