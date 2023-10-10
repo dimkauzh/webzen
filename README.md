@@ -2,6 +2,7 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/dimkauzh/webzen)
 ![GitHub license](https://img.shields.io/github/license/dimkauzh/webzen)
+![Lines of code](https://tokei.rs/b1/github/dimkauzh/webzen?category=lines)
 
 Webzen is a Go Game Engine that targets WebAssembly, enabling you to build web applications with Go. It helps you build your games easy and fast. This project leverages `syscall/js` to interact with the JavaScript runtime in the browser.
 
