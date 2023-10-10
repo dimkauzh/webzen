@@ -12,7 +12,6 @@ setup:
 
 	go install github.com/hajimehoshi/wasmserve@latest
 
-
 example:
 	@echo
 	@echo " ----------------------------------------------------"
