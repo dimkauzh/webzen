@@ -1,5 +1,5 @@
 <h1 align="center">Webzen</h1>
-<h2 align="center">A Go Game Engine that targets WebAssembly!</h2>
+<h3 align="center">A Go Game Engine that targets WebAssembly!</h3>
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/dimkauzh/webzen)
 ![GitHub license](https://img.shields.io/github/license/dimkauzh/webzen)
