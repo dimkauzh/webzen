@@ -21,7 +21,7 @@ func NewRect(x, y, width, height float64, color [4]int) Rect {
 }
 
 func (r *Rect) Draw() {
-	canvas := document.GetElementById("canvas")
+	canvas := document.GetElementById("webzen")
 	context := canvas.GetContext("2d")
 
 	rgba := colors.GetRGBA(r.color)

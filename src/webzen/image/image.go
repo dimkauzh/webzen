@@ -27,7 +27,7 @@ func (i *Image) Draw() {
 }
 
 func DrawImage(imagePath string, width, height, x, y float64) {
-	canvas := document.GetElementById("canvas")
+	canvas := document.GetElementById("webzen")
 	context := canvas.GetContext("2d")
 
 	img := document.CreateElement("img")

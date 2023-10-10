@@ -10,7 +10,7 @@ import (
 )
 
 func DrawText(text string, size, x, y int) {
-	canvas := document.GetElementById("canvas")
+	canvas := document.GetElementById("webzen")
 	context := canvas.GetContext("2d")
 
 	context.Set("font", strconv.Itoa(size)+"px Arial")

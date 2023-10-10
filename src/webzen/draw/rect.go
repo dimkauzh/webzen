@@ -9,7 +9,7 @@ import (
 )
 
 func DrawRect(width, height, x, y float64, color [4]int) {
-	canvas := document.GetElementById("canvas")
+	canvas := document.GetElementById("webzen")
 	context := canvas.GetContext("2d")
 
 	rgba := colors.GetRGBA(color)
@@ -18,7 +18,7 @@ func DrawRect(width, height, x, y float64, color [4]int) {
 }
 
 func FillBackground(color [4]int) {
-	canvas := document.GetElementById("canvas")
+	canvas := document.GetElementById("webzen")
 	context := canvas.GetContext("2d")
 
 	rgba := colors.GetRGBA(color)

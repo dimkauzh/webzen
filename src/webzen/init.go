@@ -19,13 +19,13 @@ func SetFps(fps int) {
 }
 
 func clearCanvas() {
-	canvas := document.GetElementById("canvas")
+	canvas := document.GetElementById("webzen")
 	context := canvas.GetContext("2d")
 	context.ClearRect(0, 0, canvas.Get("width").Float(), canvas.Get("height").Float())
 }
 
 func Init() {
-	canvas := document.GetElementById("canvas")
+	canvas := document.GetElementById("webzen")
 	if canvas.IsNull() {
 		canvas = document.CreateCanvasElement()
 		canvas.Set("id", "canvas")
