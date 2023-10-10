@@ -21,5 +21,8 @@ jobs:
       with:
         go-version: '1.20'
         
-    - name: Test
-      run: make build_test
+    - name: Test1
+      run: GOOS=js GOARCH=wasm go build -o build/main.wasm tests/test1/test1.go
+
+    - name: Example
+      run: make example
