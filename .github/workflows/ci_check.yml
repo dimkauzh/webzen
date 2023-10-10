@@ -25,4 +25,4 @@ jobs:
       run: GOOS=js GOARCH=wasm go build -o build/main.wasm tests/test1/test1.go
 
     - name: Example
-      run: make example
+      run: GOOS=js GOARCH=wasm go build -o build/main.wasm examples/example.go
