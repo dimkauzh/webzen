@@ -29,6 +29,10 @@ func (c *canvas) IsNull() bool {
 	return c.canvas.IsNull()
 }
 
+func (c *canvas) AddEventListener(ev string, fn js.Func) {
+	js.Global().Get("window").Call("addEventListener", ev, fn)
+}
+
 func (c *context) Set(key string, value interface{}) {
 	c.context.Set(key, value)
 }
