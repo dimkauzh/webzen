@@ -10,6 +10,7 @@ import (
 )
 
 var keyPressed = make(map[string]bool)
+var pressed = false
 
 func SetupEventListeners() {
 	// Initialize event listeners once
@@ -36,4 +37,16 @@ func SetupEventListeners() {
 
 func KeyPressed(key string) bool {
 	return keyPressed[key]
+}
+
+func KeyPressedOnce(key string) bool {
+	if !pressed && KeyPressed(key) {
+		pressed = true
+		return true
+	} else if !KeyPressed(key) {
+		pressed = false
+		return false
+	}
+
+	return false
 }

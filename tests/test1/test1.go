@@ -20,7 +20,7 @@ func main() {
 			tools.Print("Button pressed")
 		})
 
-		if keys.KeyPressed("a") {
+		if keys.KeyPressedOnce("a") {
 			tools.Print("A key pressed")
 		}
 		webzen.Update()
