@@ -47,7 +47,32 @@ func Init() {
 	keys.SetupEventListeners()
 }
 
+func CustomInit(width, height int) {
+	canvas := document.GetElementById("webzen")
+	if canvas.IsNull() {
+		canvas = document.CreateCanvasElement()
+		canvas.Set("id", "canvas")
+		document.Body.AppendCanvasChild(canvas)
+	}
+
+	canvas.Set("width", width)
+	canvas.Set("height", height)
+
+	document.DocumentElement.Style.Set("overflow", "hidden")
+	document.Body.Style.Set("overflow", "hidden")
+
+	keys.SetupEventListeners()
+}
+
 func Update() {
 	time.Sleep(time.Millisecond * 16)
 	clearCanvas()
+}
+
+func GetWidth() int {
+	return document.DocumentElement.ClientIntWidth()
+}
+
+func GetHeight() int {
+	return document.DocumentElement.ClientIntHeight()
 }

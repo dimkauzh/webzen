@@ -72,6 +72,14 @@ func (d *documentElement) ClientHeight() js.Value {
 	return js.Global().Get("document").Get("documentElement").Get("clientHeight")
 }
 
+func (d *documentElement) ClientIntWidth() int {
+	return js.Global().Get("document").Get("documentElement").Get("clientWidth").Int()
+}
+
+func (d *documentElement) ClientIntHeight() int {
+	return js.Global().Get("document").Get("documentElement").Get("clientHeight").Int()
+}
+
 func (d *styleDocument) Set(key string, value interface{}) {
 	js.Global().Get("document").Get("documentElement").Get("style").Set(key, value)
 }
