@@ -2,7 +2,7 @@ package main
 
 import (
 	// Import the webzen package
-	"github.com/dimkauzh/webzen"
+	"github.com/dimkauzh/webzen/"
 
 	// Import the webzen draw package
 	"github.com/dimkauzh/webzen/src/draw"

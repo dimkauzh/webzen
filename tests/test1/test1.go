@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/dimkauzh/webzen/src/webzen"
-	"github.com/dimkauzh/webzen/src/webzen/draw"
-	"github.com/dimkauzh/webzen/src/webzen/keys"
-	"github.com/dimkauzh/webzen/src/webzen/tools"
-	"github.com/dimkauzh/webzen/src/webzen/ui"
+	"github.com/dimkauzh/webzen"
+	"github.com/dimkauzh/webzen/src/draw"
+	"github.com/dimkauzh/webzen/src/keys"
+	"github.com/dimkauzh/webzen/src/tools"
+	"github.com/dimkauzh/webzen/src/ui"
 )
 
 func main() {
@@ -23,6 +23,10 @@ func main() {
 		if keys.KeyPressedOnce("a") {
 			tools.Print("A key pressed")
 		}
+
+		pos := keys.GetMousePos()
+
+		tools.Print(pos[0], pos[1])
 		webzen.Update()
 	}
 }

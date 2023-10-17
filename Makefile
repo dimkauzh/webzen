@@ -19,7 +19,7 @@ example:
 	@echo " ----------------------------------------------------"
 	@echo
 	
-	$(EXAMPLE_BUILD_TOOL) ./example/
+	$(EXAMPLE_BUILD_TOOL) ./example/example.go
 
 release:
 	@echo

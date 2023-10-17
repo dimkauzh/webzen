@@ -4,13 +4,13 @@
 package entity
 
 import (
-    "github.com/dimkauzh/webzen/src/webzen/image"
-    "github.com/dimkauzh/webzen/src/webzen/shape"
+    "github.com/dimkauzh/webzen/src/image"
+    "github.com/dimkauzh/webzen/src/shape"
+    "github.com/dimkauzh/webzen/src/vector"
 )
 
 type Entity struct {
-    x      int
-    y      int
+    pos    vector.Vector2D
     width  int
     height int
     image  image.Image
@@ -18,7 +18,7 @@ type Entity struct {
 }
 
 func NewEntity(x int, y int, width int, height int) Entity {
-    return Entity{x, y, width, height, nil, nil}
+    return Entity{vector.NewVector2D(x, y), width, height, nil, nil}
 }
 
 func (e *Entity) SetImage(image image.Image) {
