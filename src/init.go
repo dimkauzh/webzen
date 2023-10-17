@@ -1,7 +1,7 @@
 //go:build js && wasm
 // +build js,wasm
 
-package webzen
+package src
 
 import (
 	"syscall/js"
@@ -9,7 +9,7 @@ import (
 
 	"github.com/dimkauzh/webzen/src/backend/document"
 	"github.com/dimkauzh/webzen/src/backend/window"
-	"github.com/dimkauzh/webzen/src/webzen/keys"
+	"github.com/dimkauzh/webzen/src/keys"
 )
 
 var fpsInterval = time.Millisecond * 16
