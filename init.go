@@ -1,7 +1,7 @@
 //go:build js && wasm
 // +build js,wasm
 
-package src
+package webzen
 
 import (
 	"syscall/js"
