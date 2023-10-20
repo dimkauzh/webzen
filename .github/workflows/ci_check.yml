@@ -11,7 +11,7 @@ on:
 
 jobs:
 
-  Build Test:
+  Build_Test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -24,7 +24,7 @@ jobs:
     - name: Test1
       run: GOOS=js GOARCH=wasm go build -o build/main.wasm tests/test1/test1.go
 
-  Build Example:
+  Build_Example:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
