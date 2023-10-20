@@ -23,10 +23,6 @@ func main() {
 		if keys.KeyPressedOnce("a") {
 			tools.Print("A key pressed")
 		}
-
-		pos := keys.GetMousePos()
-
-		tools.Print(pos[0], pos[1])
 		webzen.Update()
 	}
 }
