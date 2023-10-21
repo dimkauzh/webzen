@@ -18,6 +18,10 @@ func SetFps(fps int) {
 	fpsInterval = time.Second / time.Duration(fps)
 }
 
+func GetFps() float64 {
+	return float64(time.Second) / float64(fpsInterval)
+}
+
 func clearCanvas() {
 	canvas := document.GetElementById("webzen")
 	context := canvas.GetContext("2d")
